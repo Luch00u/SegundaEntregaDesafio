@@ -86,7 +86,7 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     background-color: rgb(92, 89, 89);
   }
-  h3 a{
+  h3 a {
     color: #f0a500;
   }
   .camas {
@@ -133,11 +133,238 @@
     height: 20vh;
   }
   /*-----------------footer---------------*/
-  footer{
-      height: 5rem;
-      background-color: #1b1a17;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  footer {
+    height: 5rem;
+    background-color: #1b1a17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*-----------------------------------CAMAS-----------------------------------------*/
+  .productos {
+    grid-template-areas:
+      "uno"
+      "dos"
+      "tres"
+      "cuatro";
+    background-color: #1b1a17;
+  }
+  .productos .uno,
+  .dos,
+  .tres,
+  .cuatro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .productos img {
+    width: 80%;
+  }
+  .uno {
+    grid-area: uno;
+  }
+  .dos {
+    grid-area: dos;
+  }
+  .tres {
+    grid-area: tres;
+  }
+  .cuatro {
+    grid-area: cuatro;
+  }
+}
+
+/*------------------------Media query 1024px arriba------------------*/
+@media screen and (min-width: 1024px) {
+  .cabecera {
+    background-color: #1b1a17;
+    display: grid;
+    grid-template-areas:
+      "containerLogo  containerLogo"
+      "navBar navBar";
+  }
+  /* ----Titulo e imagen----- */
+  .containerLogo {
+    grid-area: containerLogo;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+  }
+  .navBar {
+    grid-area: navBar;
+    height: 5rem;
+  }
+  .logo {
+    border-radius: 30px;
+    opacity: 90%;
+  }
+  .containerLogo .logo,
+  .nombreSitio {
+    width: 8rem;
+  }
+  .nombreSitio {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 2rem;
+    color: #f0a500;
+  }
+  /*-----Navegador ------*/
+  .navBar .listaNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+  }
+  .listaNav li {
+    border: 1px solid white;
+    padding: 15px;
+  }
+  .listaNav li:hover{
+      opacity: 50%;
+      cursor: pointer;
+  }
+
+  /*------------Estructura del main-----------------*/
+  .presentacion {
+    border: 1px solid black;
+    background-image: url(/images/seccionBienvenida.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .presentacion h2 {
+    display: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: transparent;
+  }
+  /* ------------Layout del inicio-------------- */
+  .inicio {
+    display: grid;
+    grid-template-areas:
+      "presentacion presentacion"
+      "camas cajoneras";
+  }
+  .presentacion {
+    grid-area: presentacion;
+  }
+  .camas,
+  .cajoneras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h3 {
+    border: 1px solid black;
+    color: #f0a500;
+    border-radius: 30px;
+    padding: 10px;
+    font: 30px bold;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    background-color: rgb(92, 89, 89);
+  }
+  h3 a {
+    color: #f0a500;
+    
+  }
+  h3 a:hover{
+      opacity: 50%;
+      cursor: pointer;
+  }
+  .camas {
+    grid-area: camas;
+    height: 30vh;
+    background-image: url(/images/bedroom-416062.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .cajoneras {
+    grid-area: cajoneras;
+    height: 30vh;
+    background-image: url(/images/cajoneraPino.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  /*-------------------Nosotros---------------*/
+  .nosotros {
+    background-color: #14121e;
+    display: grid;
+    grid-template-areas:
+      "proposito"
+      "ubicacion";
+  }
+  .proposito {
+    grid-area: proposito;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ubicacion {
+    grid-area: ubicacion;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .ubicacion iframe {
+    height: 20vh;
+  }
+  /*-----------------footer---------------*/
+  footer {
+    height: 5rem;
+    background-color: #1b1a17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*-----------------------------------CAMAS-----------------------------------------*/
+  .productos {
+      display: grid;
+    grid-template-areas:
+      "uno dos"
+      "tres cuatro";
+    background-color: #1b1a17;
+  }
+  .productos .uno,
+  .dos,
+  .tres,
+  .cuatro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .productos img {
+    width:20rem;
+  }
+  .uno {
+    grid-area: uno;
+  }
+  .dos {
+    grid-area: dos;
+  }
+  .tres {
+    grid-area: tres;
+  }
+  .cuatro {
+    grid-area: cuatro;
   }
 }
